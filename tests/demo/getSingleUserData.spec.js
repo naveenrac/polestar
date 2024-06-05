@@ -4,7 +4,7 @@ test('API Get Request', async ({ request }) => {
   const response = await request.get('https://reqres.in/api/users/2', {
     
   })
-  expect(response.status().toBe(201));
+  expect(response.status()).toBe(200);
   const text = await response.text();
   console.log(response.json());
   console.log(response.status());

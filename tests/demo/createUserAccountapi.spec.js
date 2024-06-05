@@ -7,7 +7,7 @@ test('API POST Request', async ({ request }) => {
       "job": "leader"
     }
   })
-  expect(response.status().toBe(201));
+  expect(response.status()).toBe(201);
   const text = await response.text();
   console.log(response.json());
   console.log(response.status());
